@@ -1,0 +1,19 @@
+ REPL is an interactive command-line environment that allows you to execute JavaScript code immediately and see the results.
+
+ Read: Reads the user's input (a line of JavaScript code).
+ Evaluate: Evaluates the code that was read.
+ Print: Prints the result of the evaluation to the console.
+ Loop: Loops back to the Read state, waiting for the next input.
+
+ How to Access and Use REPL
+     node
+     The > symbol is the prompt where you enter your code.
+     
+ Exiting REPL
+    // Ctrl + C
+    // .exit
+
+ .help	               Shows a list of all special REPL commands.
+ .clear	               Resets the context of the REPL (clears all defined variables).
+ .save <filename>	   Saves the current REPL session's history to a file.
+ .load <filename>	   Loads a file and executes its content in the REPL context.

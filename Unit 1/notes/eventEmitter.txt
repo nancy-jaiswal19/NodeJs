@@ -1,0 +1,23 @@
+EventEmiiter
+ EventEmiiter is a built-in Node.js module that lets your code send events and react to evmts.
+ It's how Node handles things without waiting(Non-blocking I/O)
+
+
+Role of EventEmiiter
+EventEmitter allows you to emit events & listen to events (asynchronously)
+
+
+
+Key Methods
+Require the built-in events module and create an instance of the class
+
+Syntax:
+const EventEmiiter = require("events")
+const myEmitter = new EventEmiiter()
+
+
+Useful Methods
+on(event, listener)         ->        runs every time the event happens (Subscribing)
+once(event.listener)        ->        runs only the first time the event happens (Subscribing once)
+emit(event, ...args)         ->       fires the eventand call all listeners (Publishing)
+removeListener(event,listener)  ->    remove a specific event (Unsubscribing)

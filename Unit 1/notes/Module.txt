@@ -1,0 +1,98 @@
+
+  MODULES
+
+
+ Every file in Node.js is a module Modules help to:
+ - Organize code
+ - Reuse functions
+ - Avoid variable clashes
+ - Build large apps (like Express projects)
+
+
+ Types of Modules
+ 1. Core Modules → built-in (fs, os, path, http)
+ 2. Local Modules → your own files (math.js, Module.js)
+ 3. Third-Party Modules → installed via npm (express, mongoose)
+
+
+
+ IMPORTING MODULES — require()
+
+ Syntax:
+ const something = require("module-name");
+
+
+ CORE MODULE EXAMPLE
+
+const os = require("os");
+console.log(os.platform());
+
+
+    LOCAL MODULE EXAMPLES
+
+    1.SINGLE EXPORT EXAMPLE
+ math.js
+ 
+function add(a, b) {
+    return a + b;
+}
+module.exports = add;        // single export
+
+
+app.js
+
+const add = require("./math");
+console.log(add(10, 20));    // 30
+
+
+
+    2.MULTIPLE EXPORT EXAMPLE 
+Module.js
+
+function add(a, b) { return a + b; }
+function mul(a, b) { return a * b; }
+function sub(a, b) { return a - b; }
+
+module.exports = {
+    add,
+    mul,
+    sub
+                         // exporting many items
+
+};
+ app.js
+
+const { add, mul, sub } = require("./Module");
+
+console.log(add(10, 20));    // 30
+console.log(mul(2, 3));      // 6
+console.log(sub(7, 3));      // 4
+
+
+
+
+    3. EXPORTING VARIABLES / ARRAYS / OBJECTS
+
+
+module.exports = {
+    name: "Nancy",
+    skills: ["JS", "HTML", "CSS"]
+};
+
+
+
+
+ IMPORTANT 
+
+ exports is just a shortcut to module.exports
+ BUT → NEVER do:/ exports = something  ( wrong)
+ Always use module.exports = ... (✔ correct)
+
+
+
+ module object
+
+
+console.log(module);
+
+ This prints details about the current module.

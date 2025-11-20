@@ -1,0 +1,13 @@
+Callback
+Callback is a function that pass as an argument to another function
+NodeJs uses callback to handle the results of asynchronous operations(like reading a file, fetching data over a network) without stopping the whole program
+
+Standard NodeJs Callback -> Error-first(common asynchronous callbacks)
+
+Syntax:
+function(error,result){ ... }
+
+error -> The first argument is reserved for error object. It dedect the error
+result -> The second argument holds the successful data
+
+First we check for error before trying to use the data, leading to safer code

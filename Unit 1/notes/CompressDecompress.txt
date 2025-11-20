@@ -1,0 +1,17 @@
+Compressing & Decompressing Data with Zlib
+
+Zlib module is a core module in NodeJs.It provides compression and decompression using Gzip & Deflate algorithms, useed for network transmission and file storage effciency.
+
+Purpose:
+Use to make data smaller and then restore it to its original size
+
+Use Cases:
+HTTP Compression: shrink the response data before sending it to the client's browser, which speed up the laoding times
+File Archiving: reduce the size of log files or backups before storing them.
+
+Zlib's Methods  (used with both Callback & Streams)
+
+zlib.gzip()         compresses data using the Gzip file format
+zlib.gunzip()       decompresses Gzip-compressed data 
+zlib.deflate()      compresses data using Deflate algorithm(raw compression)
+zlib.inflate()      decompresses Deflate-compressed data
