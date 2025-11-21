@@ -1,0 +1,3 @@
+Promise & async/await
+
+It is primarily used to solve the problem of "Callback Hell" by structuring asynchronous code to look like synchronous code
