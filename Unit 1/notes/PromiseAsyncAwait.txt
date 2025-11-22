@@ -1,3 +1,12 @@
 Promise & async/await
 
 It is primarily used to solve the problem of "Callback Hell" by structuring asynchronous code to look like synchronous code
+
+Promise
+Promise is a JavaScript object that represents the eventual completion(or failure) of an asynchronous operation and its resulting value.
+Promise is like a receipt for async task - you get it instantly and it guarantees you'll get the result later(success or failure).
+
+States of Promise -
+Pending        Async operation ongoing
+Fulfilled      operation completed successfully
+Rejected       operation failed
