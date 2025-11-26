@@ -10,3 +10,22 @@ States of Promise -
 Pending        Async operation ongoing
 Fulfilled      operation completed successfully
 Rejected       operation failed
+
+.then() -  Attached the function runs if the promise is fulfilled. This function receive the resulting data.
+.catch() - Attached the functions runs when promise is failed.This receives the error object
+
+Chaining - The best feature of Promise is that  .then() always return new Promise,  allow you to chain multiple asynchronous steps linearly, avoid deep nesting 
+
+
+async()/await()
+
+It a syntax built top on Promises that make asynchronous code look clear and easier to read
+
+async() Function - An async function always implicity return the Promise
+    async function fetchData(){ ....}
+
+await Operation -
+It is always used inside async function
+this pauses the exceution of async function until the promise on its right side settles(either fulfilled or rejects)
+If Promise fufils, await return the resulting data
+If the Promise rejects, await throws an error, which must be caught using standard try..catch block
