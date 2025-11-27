@@ -1,0 +1,22 @@
+JSON - JavaScript Object Notation
+It's a language-independent data format which is lightweight and easy fro human to read, write and easy fro computer to parse and generate.
+It is a standard fromat used for data exchange between client(like web browser,mobile app) and server(like Node.js)
+
+Based on two structures:
+1. A collection of key-value pairs: Directly map to JavaScript objects( {} )
+2. An ordered list of values: Directly map to JavaScript array( [] )
+
+Example:
+{
+    name: 'Nancy',
+    age: '18'
+
+}
+
+NodeJs Built in JSON Methods
+1. JSON.parse() -> Convert JSON string to JavaScript object or array 
+        Used when you receive data from a flie or an API response
+
+2. JSON.stringify() -> Convert JavaScript object/array to JSON string
+        Used when you prepare data to be sent to an API or saved to file. 
+

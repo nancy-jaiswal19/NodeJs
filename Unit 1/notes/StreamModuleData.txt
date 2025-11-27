@@ -1,0 +1,29 @@
+Streams are abstract interfaces that allow you to work with sequence of data without having to load entire dataset into memory all at once
+Essential for handling large files, network traffic, huge database result sets.
+
+Problem Streams Solve:
+If you use methods like fs.readfile() to read 1GB file, Node.js must load entire 1GB data into my system's RAM before it can start processing it. 
+This is inefficient and can crash your application if multiple users try to access large file simultaneously.
+
+Solution:
+Stream breaks the data into chunks. It process one chunk at a time,moving data efficiently through application pipeline.
+
+Types of Streams:
+
+1. Readable Streams: Source of data(eg. reading a file from the disk, receiving HTTP request payload)
+2. Writeable Streams: Destination of data (eg. writing data to file, sending an HTTP response)
+3. Duplex Streams: Both Readable and Writeable (eg. network sockets)
+4. Transform Streams: Duplex stream that can read data, process or modify it, and then write the modified data(eg. Zlib compression)
+
+
+Piping: Most efficient and simplest way to move data from Readable Stream to a Writeable stream.It automatically manages the flow and backpressure.
+Syntax-
+    readableStream.pipe(writeableStream);
+
+Events(for Readable Stream): Streams are Event Emitters and use to signal their state.
+
+'data' - Emitted when a chunk of data available to be consumed.
+'end' - Emitted ehrn there is no data to be read
+'error' - Emitted when an error occurs.
+
+

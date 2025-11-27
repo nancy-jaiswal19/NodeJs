@@ -1,4 +1,4 @@
-// // Promise
+// // Using Traditional Callbacks
 
 // // fetch User (async)  Callback function
 // function fetchUser(userId, callback){
@@ -30,7 +30,7 @@
 
 
 
-// async/await
+// Using async/await
 
 // Promise Function
 function fetchUser(userId){

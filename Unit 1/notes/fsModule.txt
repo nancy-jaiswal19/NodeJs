@@ -1,0 +1,18 @@
+fs module provides an API for interating with the file system of the operating system Node.js is running on
+This allows you to read, write, update, delete, and check the status of files and directories.
+
+1. Asynchronous
+
+Naming Convention -  fs.readFile
+Used - Non-blocking(uses callbacks or promises).NodeJs can continue exceuting other code while waiting for I/O to finish.
+
+2. Synchronous
+
+Naming Convention - fs.readFileSync
+Used - Blocking. NodeJs wait until the operation completed before moving to the next line of code.
+
+3. Promise-based
+
+Naming Convention - fs.promise.readFile
+Used - Non-Blocking, returns a Promise. Used with async/await for cleaner code.
+
